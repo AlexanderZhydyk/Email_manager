@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  mailing:
+    build: ./
+    shm_size: '2gb'
+    container_name: mailing
+    volumes:
+      - ./src:/checklab/src
+      - ./cron/crontab:/etc/cron.d/crontab
+    command:
+      - ./start.sh
+    env_file:
+      - .env
+    depends_on:
+      - selenium
+
+  selenium:
+    image: selenium/standalone-chrome
+    ports:
+      - 4444:4444
+    restart: always
