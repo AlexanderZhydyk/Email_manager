@@ -14,6 +14,7 @@ COPY ./Pipfile.lock ./Pipfile.lock
 
 RUN python -m pip install --upgrade pip
 RUN apt-get install -y cron
+RUN apt-get install -y vim
 RUN pip install pipenv
 RUN pipenv install --system --deploy
 
