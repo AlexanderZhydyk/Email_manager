@@ -46,7 +46,7 @@ python create_fastmail_account.py
 4. After email account be created, the scripts will monitor email inbox folder each 5 minutes to reply.
 
   
-5. To change checking interval edit `cron/crontab` file:
+5. To change checking interval edit `crontab` file:
 ```sh
 docker compose exec mailing bash
 cd ..
