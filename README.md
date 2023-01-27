@@ -22,10 +22,6 @@ git clone https://github.com/AlexandrZhydyk/checklab_task.git
 ## Usage
 1. Add app configuration to your .env file in the root of your project:
 ```sh
-IMAP_SERVER=YOUR_IMAP_SERVER
-IMAP_PORT=YOUR_IMAP_PORT
-SMTP_SERVER=YOUR_SMTP_SERVER
-SMTP_PORT=YOUR_SMTP_PORT
 OPENAI_KEY=YOUR_OPENAI_KEY
 ```
 
@@ -43,7 +39,7 @@ python create_fastmail_account.py
 > *Follow tips in the terminal.*
 
 
-4. After email account be created, the scripts will monitor email inbox folder each 5 minutes to reply.
+4. When email account be created, the scripts will monitor email inbox folder each 5 minutes to reply.
 
   
 5. To change checking interval edit `crontab` file:
