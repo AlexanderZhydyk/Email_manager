@@ -7,14 +7,13 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-from config import conf
 from gpt3_chatbot import get_reply
 
 
-IMAP_SERVER = os.getenv("IMAP_SERVER", conf.IMAP_SERVER)
-IMAP_PORT = os.getenv("IMAP_PORT", conf.IMAP_PORT)
-SMTP_SERVER = os.getenv("SMTP_SERVER", conf.SMTP_SERVER)
-SMTP_PORT = os.getenv("SMTP_PORT", conf.SMTP_PORT)
+IMAP_SERVER = 'imap.fastmail.com'
+IMAP_PORT = 993
+SMTP_SERVER = 'smtp.fastmail.com'
+SMTP_PORT = 587
 
 
 def get_smtp_server(user_email, password):
