@@ -1,6 +1,6 @@
 # Email manager
 
-The Email manager allows you to create email account and automatically checking it with provided time interval. 
+The Email manager allows you to create email account on Fastmail and automatically check inbox folder for new mails with provided time interval. 
 
 ## Prerequisites
 
@@ -16,7 +16,7 @@ for installation instructions.
 
 1. Clone the repo:
 ```sh
-git clone https://github.com/AlexandrZhydyk/checklab_task.git
+https://github.com/AlexandrZhydyk/Email_manager.git
 ```
 
 ## Usage
@@ -38,11 +38,18 @@ python create_fastmail_account.py
 ```
 > *Follow tips in the terminal.*
 
-
-4. When email account be created, the scripts will monitor email inbox folder each 5 minutes to reply.
+4. Manually create [Fastmail app password](https://www.fastmail.help/hc/en-us/articles/360058752854) for access to your email by the script.
+Please add, just generated password to already created file `email_accounts_data.json` under key `password`.
+```sh
+vim email_accounts_data.json
+i - enter to insert mode to change value
+Esc
+:wq - to save the changes
+```
+5. Finally, the scripts will monitor email inbox folder each 5 minutes to reply.
 
   
-5. To change checking interval edit `crontab` file:
+6. To change checking interval edit `crontab` file:
 ```sh
 docker compose exec mailing bash
 cd ..
