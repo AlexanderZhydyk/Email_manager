@@ -1,6 +1,8 @@
 # Email manager
 
-The Email manager allows you to create email account on Fastmail and automatically check inbox folder for new mails with provided time interval. 
+The Email manager allows you to create email account on Fastmail,
+automatically check inbox folder for new mails with provided time interval and
+give reply using ChatGPT API.
 
 ## Prerequisites
 
